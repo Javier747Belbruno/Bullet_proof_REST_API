@@ -1,0 +1,10 @@
+- npm init -y
+- yarn add -D typescript ts-node-dev
+- npx tsc --init
+- yarn add express
+- yarn add @types/express -D
+- yarn add sequelize
+- yarn add sqlite3
+- yarn add uuid
+- yarn add @types/uuid -D
+- yarn add express-validator
