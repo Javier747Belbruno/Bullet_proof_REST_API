@@ -4,7 +4,7 @@
 
 ## Items TODO
 
-[ ] Add Tests
+[x] Add Tests
 
 ### Commands employed
 
