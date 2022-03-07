@@ -1,3 +1,13 @@
+## TODO CRUD rest API with typescript + Express.js + Sequelize + Sqlite3
+
+#### Channel: DailyWebCoding / Video: https://www.youtube.com/watch?v=yFgrSJGNj0E&ab_channel=DailyWebCoding
+
+## Items TODO
+
+[ ] Add Tests
+
+### Commands employed
+
 - npm init -y
 - yarn add -D typescript ts-node-dev
 - npx tsc --init
