@@ -9,7 +9,6 @@ class TodoController {
       const record = await TodoInstance.create({ ...req.body, id });
       return res.json({ record, msg: "Record created successfully" });
     } catch (err) {
-      console.log(err);
       return res.json({
         msg: "Error in creating record",
         status: 500,
@@ -27,9 +26,8 @@ class TodoController {
         limit,
         offset,
       });
-      return res.json({ records, msg: "Records fetched successfully" });
+      return res.json(records);
     } catch (err) {
-      console.log(err);
       return res.json({
         msg: "Error in fetching records",
         status: 500,
@@ -42,7 +40,7 @@ class TodoController {
     try {
       const id = req.params.id;
       const record = await TodoInstance.findOne({ where: { id } });
-      return res.json({ record, msg: "Record fetched successfully" });
+      return res.json(record);
     } catch (err) {
       console.log(err);
       return res.json({

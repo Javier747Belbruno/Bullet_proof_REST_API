@@ -18,3 +18,7 @@
 - yarn add uuid
 - yarn add @types/uuid -D
 - yarn add express-validator
+
+- yarn add -D ts-jest jest @types/jest supertest @types/supertest
+- npx ts-jest config:init
+- yarn test
