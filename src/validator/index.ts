@@ -1,4 +1,4 @@
-import { body, query } from "express-validator";
+import { body, param, query } from "express-validator";
 
 class TodoValidator {
   checkCreateTodo() {
@@ -21,10 +21,18 @@ class TodoValidator {
         .isInt({ min: 1, max: 10 })
         .withMessage("limit must be a number between 1 and 10"),
       query("offset")
+        .optional()
+        .isNumeric()
+        .withMessage("offset must be a number"),
+    ];
+  }
+  checkIdParam() {
+    return [
+      param("id")
         .notEmpty()
-        .withMessage("offset is required")
-        .isInt({ min: 0, max: 100 })
-        .withMessage("offset must be a number between 0 and 100"),
+        .withMessage("id is required")
+        .isUUID(4)
+        .withMessage("id must be a valid uuid"),
     ];
   }
 }
